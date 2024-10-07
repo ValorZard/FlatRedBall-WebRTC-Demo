@@ -51,33 +51,6 @@ namespace test_webrtc
 
 		public Game1() : base()
         {
-			FlatRedBall.Debugging.Debugger.CommandLineWrite("WebRTC Get Started Data Channel");
-
-			// Start web socket.
-			FlatRedBall.Debugging.Debugger.CommandLineWrite("Starting web socket server...");
-			var webSocketServer = new WebSocketServer(IPAddress.Any, WEBSOCKET_PORT);
-			webSocketServer.AddWebSocketService<WebRTCWebSocketPeer>("/", (peer) =>
-			{
-				peer.CreatePeerConnection = CreatePeerConnection;
-			});
-			webSocketServer.Start();
-
-			FlatRedBall.Debugging.Debugger.CommandLineWrite($"Waiting for web socket connections on {webSocketServer.Address}:{webSocketServer.Port}...");
-			FlatRedBall.Debugging.Debugger.CommandLineWrite("Press ctrl-c to exit.");
-
-			// Ctrl-c will gracefully exit the call at any point.
-			ManualResetEvent exitMre = new ManualResetEvent(false);
-			Console.CancelKeyPress += delegate (object sender, ConsoleCancelEventArgs e)
-			{
-				e.Cancel = true;
-				exitMre.Set();
-			};
-
-			// Wait for a signal saying the call failed, was cancelled with ctrl-c or completed.
-			// if we comment this out, this probably will make it so that it never actually ends the call, which is probably fine?
-			//exitMre.WaitOne();
-
-
 
 			graphics = new GraphicsDeviceManager(this);
 
@@ -109,7 +82,36 @@ namespace test_webrtc
             base.Initialize();
         }
 
-        protected override void Update(GameTime gameTime)
+		public void StartConnection()
+		{
+			FlatRedBall.Debugging.Debugger.CommandLineWrite("WebRTC Get Started Data Channel");
+
+			// Start web socket.
+			FlatRedBall.Debugging.Debugger.CommandLineWrite("Starting web socket server...");
+			var webSocketServer = new WebSocketServer(IPAddress.Any, WEBSOCKET_PORT);
+			webSocketServer.AddWebSocketService<WebRTCWebSocketPeer>("/", (peer) =>
+			{
+				peer.CreatePeerConnection = CreatePeerConnection;
+			});
+			webSocketServer.Start();
+
+			FlatRedBall.Debugging.Debugger.CommandLineWrite($"Waiting for web socket connections on {webSocketServer.Address}:{webSocketServer.Port}...");
+			FlatRedBall.Debugging.Debugger.CommandLineWrite("Press ctrl-c to exit.");
+
+			// Ctrl-c will gracefully exit the call at any point.
+			ManualResetEvent exitMre = new ManualResetEvent(false);
+			Console.CancelKeyPress += delegate (object sender, ConsoleCancelEventArgs e)
+			{
+				e.Cancel = true;
+				exitMre.Set();
+			};
+
+			// Wait for a signal saying the call failed, was cancelled with ctrl-c or completed.
+			// if we comment this out, this probably will make it so that it never actually ends the call, which is probably fine?
+			//exitMre.WaitOne();
+		}
+
+		protected override void Update(GameTime gameTime)
         {
             FlatRedBallServices.Update(gameTime);
 

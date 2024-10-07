@@ -24,11 +24,18 @@ namespace test_webrtc.Screens
 
         void CustomInitialize()
         {
-
+			Forms.ButtonStandardInstance.Click += ButtonStandardInstance_Click;
 
         }
 
-        void CustomActivity(bool firstTimeCalled)
+        // this button starts server
+		private void ButtonStandardInstance_Click(object sender, EventArgs e)
+		{
+            var game1 = FlatRedBallServices.Game as Game1;
+            game1.StartConnection();
+		}
+
+		void CustomActivity(bool firstTimeCalled)
         {
 
 

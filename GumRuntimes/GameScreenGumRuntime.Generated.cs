@@ -25,6 +25,9 @@ namespace test_webrtc.GumRuntimes
                 switch(mCurrentVariableState)
                 {
                     case  VariableState.Default:
+                        ButtonStandardInstance.ButtonDisplayText = "Start Server";
+                        ButtonStandardInstance.X = 349f;
+                        ButtonStandardInstance.Y = 2f;
                         break;
                 }
             }
@@ -39,14 +42,38 @@ namespace test_webrtc.GumRuntimes
                 throw new System.Exception("interpolationValue cannot be NaN");
             }
             #endif
+            bool setButtonStandardInstanceXFirstValue = false;
+            bool setButtonStandardInstanceXSecondValue = false;
+            float ButtonStandardInstanceXFirstValue= 0;
+            float ButtonStandardInstanceXSecondValue= 0;
+            bool setButtonStandardInstanceYFirstValue = false;
+            bool setButtonStandardInstanceYSecondValue = false;
+            float ButtonStandardInstanceYFirstValue= 0;
+            float ButtonStandardInstanceYSecondValue= 0;
             switch(firstState)
             {
                 case  VariableState.Default:
+                    if (interpolationValue < 1)
+                    {
+                        this.ButtonStandardInstance.ButtonDisplayText = "Start Server";
+                    }
+                    setButtonStandardInstanceXFirstValue = true;
+                    ButtonStandardInstanceXFirstValue = 349f;
+                    setButtonStandardInstanceYFirstValue = true;
+                    ButtonStandardInstanceYFirstValue = 2f;
                     break;
             }
             switch(secondState)
             {
                 case  VariableState.Default:
+                    if (interpolationValue >= 1)
+                    {
+                        this.ButtonStandardInstance.ButtonDisplayText = "Start Server";
+                    }
+                    setButtonStandardInstanceXSecondValue = true;
+                    ButtonStandardInstanceXSecondValue = 349f;
+                    setButtonStandardInstanceYSecondValue = true;
+                    ButtonStandardInstanceYSecondValue = 2f;
                     break;
             }
             var wasSuppressed = mIsLayoutSuspended;
@@ -55,6 +82,14 @@ namespace test_webrtc.GumRuntimes
             if (shouldSuspend)
             {
                 SuspendLayout(suspendRecursively);
+            }
+            if (setButtonStandardInstanceXFirstValue && setButtonStandardInstanceXSecondValue)
+            {
+                ButtonStandardInstance.X = ButtonStandardInstanceXFirstValue * (1 - interpolationValue) + ButtonStandardInstanceXSecondValue * interpolationValue;
+            }
+            if (setButtonStandardInstanceYFirstValue && setButtonStandardInstanceYSecondValue)
+            {
+                ButtonStandardInstance.Y = ButtonStandardInstanceYFirstValue * (1 - interpolationValue) + ButtonStandardInstanceYSecondValue * interpolationValue;
             }
             if (interpolationValue < 1)
             {
@@ -131,6 +166,7 @@ namespace test_webrtc.GumRuntimes
         public override void StopAnimations () 
         {
             base.StopAnimations();
+            ButtonStandardInstance.StopAnimations();
         }
         public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
         {
@@ -143,6 +179,30 @@ namespace test_webrtc.GumRuntimes
             switch(state)
             {
                 case  VariableState.Default:
+                    newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                    {
+                        SetsValue = true,
+                        Name = "ButtonStandardInstance.ButtonDisplayText",
+                        Type = "string",
+                        Value = ButtonStandardInstance.ButtonDisplayText
+                    }
+                    );
+                    newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                    {
+                        SetsValue = true,
+                        Name = "ButtonStandardInstance.X",
+                        Type = "float",
+                        Value = ButtonStandardInstance.X
+                    }
+                    );
+                    newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                    {
+                        SetsValue = true,
+                        Name = "ButtonStandardInstance.Y",
+                        Type = "float",
+                        Value = ButtonStandardInstance.Y
+                    }
+                    );
                     break;
             }
             return newState;
@@ -153,6 +213,30 @@ namespace test_webrtc.GumRuntimes
             switch(state)
             {
                 case  VariableState.Default:
+                    newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                    {
+                        SetsValue = true,
+                        Name = "ButtonStandardInstance.ButtonDisplayText",
+                        Type = "string",
+                        Value = ButtonStandardInstance.ButtonDisplayText
+                    }
+                    );
+                    newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                    {
+                        SetsValue = true,
+                        Name = "ButtonStandardInstance.X",
+                        Type = "float",
+                        Value = ButtonStandardInstance.X + 349f
+                    }
+                    );
+                    newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                    {
+                        SetsValue = true,
+                        Name = "ButtonStandardInstance.Y",
+                        Type = "float",
+                        Value = ButtonStandardInstance.Y + 2f
+                    }
+                    );
                     break;
             }
             return newState;
@@ -172,6 +256,7 @@ namespace test_webrtc.GumRuntimes
             base.ApplyState(state);
         }
         private bool tryCreateFormsObject;
+        public global::test_webrtc.GumRuntimes.Controls.ButtonStandardRuntime ButtonStandardInstance { get; set; }
         public GameScreenGumRuntime () 
         	: this(true, true)
         {
@@ -205,6 +290,7 @@ namespace test_webrtc.GumRuntimes
         }
         private void AssignInternalReferences () 
         {
+            ButtonStandardInstance = this.GetGraphicalUiElementByName("ButtonStandardInstance") as global::test_webrtc.GumRuntimes.Controls.ButtonStandardRuntime;
             if (tryCreateFormsObject)
             {
                 FormsControlAsObject = new global::test_webrtc.FormsControls.Screens.GameScreenGumForms(this);

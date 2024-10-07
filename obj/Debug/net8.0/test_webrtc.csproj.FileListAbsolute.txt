@@ -144,3 +144,4 @@ C:\Users\sraya\OneDrive\Documents\FlatRedBallProjects\test_webrtc\test_webrtc\ob
 C:\Users\sraya\OneDrive\Documents\FlatRedBallProjects\test_webrtc\test_webrtc\obj\Debug\net8.0\test_webrtc.pdb
 C:\Users\sraya\OneDrive\Documents\FlatRedBallProjects\test_webrtc\test_webrtc\obj\Debug\net8.0\test_webrtc.genruntimeconfig.cache
 C:\Users\sraya\OneDrive\Documents\FlatRedBallProjects\test_webrtc\test_webrtc\obj\Debug\net8.0\ref\test_webrtc.dll
+C:\Users\sraya\OneDrive\Documents\FlatRedBallProjects\test_webrtc\test_webrtc\obj\Debug\net8.0\test_webrtc.sourcelink.json
