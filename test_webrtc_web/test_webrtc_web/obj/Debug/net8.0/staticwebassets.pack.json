@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\obj\\Debug\\net8.0\\compressed\\xdajf5vn2z.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\test_webrtc.styles.css",
+      "PackagePath": "staticwebassets\\test_webrtc.styles.css"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\wwwroot\\Content\\test_webrtc_webContent.mgcb",
+      "PackagePath": "staticwebassets\\Content\\test_webrtc_webContent.mgcb"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\wwwroot\\js\\decode.min.js",
+      "PackagePath": "staticwebassets\\js\\decode.min.js"
+    },
+    {
+      "Id": "C:\\Github\\FlatRedBall-WebRTC-Demo\\test_webrtc_web\\test_webrtc_web\\wwwroot\\kni.png",
+      "PackagePath": "staticwebassets\\kni.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.test_webrtc.props",
+      "PackagePath": "build\\test_webrtc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.test_webrtc.props",
+      "PackagePath": "buildMultiTargeting\\test_webrtc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.test_webrtc.props",
+      "PackagePath": "buildTransitive\\test_webrtc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.test_webrtc.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

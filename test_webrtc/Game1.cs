@@ -20,11 +20,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
+#if DESKTOP_GL
 using Serilog;
 using Serilog.Extensions.Logging;
 using SIPSorcery.Net;
 using SIPSorcery.Sys;
 using WebSocketSharp.Server;
+#endif
 
 namespace test_webrtc
 {

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("test_webrtc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2793272104150f008140261f6a20ac3fd8263252")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ba86b77171145fb14b03947acfa615f1ed94f1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("test_webrtc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("test_webrtc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
