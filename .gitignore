@@ -1,0 +1,23 @@
+# git ignore
+*.user
+*.user.*
+*.aeproperties
+.vs/
+*.tmp
+*.Generated.cs
+*.Generated.Event.cs
+*.generatedpreview.png
+*.ods#
+TiledObjects.Generated.xml
+*.cachefile
+*.csvSettings
+*.sln.metaproj
+packages/
+test_webrtc/test_webrtc/bin/
+test_webrtc/bin/
+test_webrtc/test_webrtc/obj/
+test_webrtc/obj/
+test_webrtc/Content/obj/
+!test_webrtc/x64
+!test_webrtc/x86
+!test_webrtc/Libraries
