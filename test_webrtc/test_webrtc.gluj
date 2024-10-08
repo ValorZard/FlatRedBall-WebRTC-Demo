@@ -53,7 +53,9 @@
   "GlobalContentSettingsSave": {
     "GenerateLoadGlobalContentCode": true
   },
-  "SyncedProjects": [],
+  "SyncedProjects": [
+    "../test_webrtc_web/test_webrtc_web/test_webrtc_web.csproj"
+  ],
   "StartUpScreen": "Screens\\Level1",
   "ResolutionPresets": [],
   "PerformanceSettingsSave": {},

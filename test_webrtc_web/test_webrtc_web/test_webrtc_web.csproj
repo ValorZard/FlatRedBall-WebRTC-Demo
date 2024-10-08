@@ -1,0 +1,1011 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <RootNamespace>test_webrtc</RootNamespace>
+    <AssemblyName>test_webrtc</AssemblyName>
+    <DefineConstants>$(DefineConstants);BLAZORGL;WEB</DefineConstants>
+    <KniPlatform>BlazorGL</KniPlatform>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\test_webrtc\DataTypes\PlatformerValues.Generated.cs">
+      <Link>DataTypes\PlatformerValues.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\DataTypes\TileMapInfo.Generated.cs">
+      <Link>DataTypes\TileMapInfo.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Entities\Player.cs">
+      <Link>Entities\Player.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Entities\Player.Generated.cs">
+      <Link>Entities\Player.Generated.cs</Link>
+      <DependentUpon>Player.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Factories\PlayerFactory.Generated.cs">
+      <Link>Factories\PlayerFactory.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\FileAliases.Generated.cs">
+      <Link>FileAliases.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Forms\Screens\GameScreenGumForms.Generated.cs">
+      <Link>Forms\Screens\GameScreenGumForms.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Forms\Screens\Level1GumForms.Generated.cs">
+      <Link>Forms\Screens\Level1GumForms.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Forms\Screens\Level2GumForms.Generated.cs">
+      <Link>Forms\Screens\Level2GumForms.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Game1.Generated.cs">
+      <Link>Game1.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GlobalContent.Generated.cs">
+      <Link>GlobalContent.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IButtonBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IButtonBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\ICheckBoxBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\ICheckBoxBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IComboBoxBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IComboBoxBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IDialogBoxBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IDialogBoxBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IInputDeviceSelectionItemBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IInputDeviceSelectionItemBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IInputDeviceSelectorBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IInputDeviceSelectorBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\ILabelBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\ILabelBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IListBoxBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IListBoxBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IListBoxItemBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IListBoxItemBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IOnScreenKeyboardBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IOnScreenKeyboardBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IPasswordBoxBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IPasswordBoxBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IPlayerJoinViewBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IPlayerJoinViewBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IPlayerJoinViewItemBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IPlayerJoinViewItemBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IRadioButtonBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IRadioButtonBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IScrollBarBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IScrollBarBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IScrollViewerBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IScrollViewerBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\ISettingsViewBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\ISettingsViewBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\ISliderBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\ISliderBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\ITextBoxBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\ITextBoxBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IToastBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IToastBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IToggleBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IToggleBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\ITreeViewBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\ITreeViewBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\ITreeViewItemBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\ITreeViewItemBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Behaviors\IUserControlBehavior.Generated.cs">
+      <Link>GumRuntimes\Behaviors\IUserControlBehavior.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\CircleRuntime.Generated.cs">
+      <Link>GumRuntimes\CircleRuntime.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\ColoredRectangleRuntime.Generated.cs">
+      <Link>GumRuntimes\ColoredRectangleRuntime.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\ContainerRuntime.Generated.cs">
+      <Link>GumRuntimes\ContainerRuntime.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonCloseRuntime.cs">
+      <Link>GumRuntimes\Controls\ButtonCloseRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonCloseRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ButtonCloseRuntime.Generated.cs</Link>
+      <DependentUpon>ButtonCloseRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonConfirmRuntime.cs">
+      <Link>GumRuntimes\Controls\ButtonConfirmRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonConfirmRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ButtonConfirmRuntime.Generated.cs</Link>
+      <DependentUpon>ButtonConfirmRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonDenyRuntime.cs">
+      <Link>GumRuntimes\Controls\ButtonDenyRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonDenyRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ButtonDenyRuntime.Generated.cs</Link>
+      <DependentUpon>ButtonDenyRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonIconRuntime.cs">
+      <Link>GumRuntimes\Controls\ButtonIconRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonIconRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ButtonIconRuntime.Generated.cs</Link>
+      <DependentUpon>ButtonIconRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonStandardIconRuntime.cs">
+      <Link>GumRuntimes\Controls\ButtonStandardIconRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonStandardIconRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ButtonStandardIconRuntime.Generated.cs</Link>
+      <DependentUpon>ButtonStandardIconRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonStandardRuntime.cs">
+      <Link>GumRuntimes\Controls\ButtonStandardRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonStandardRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ButtonStandardRuntime.Generated.cs</Link>
+      <DependentUpon>ButtonStandardRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonTabRuntime.cs">
+      <Link>GumRuntimes\Controls\ButtonTabRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ButtonTabRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ButtonTabRuntime.Generated.cs</Link>
+      <DependentUpon>ButtonTabRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\CheckBoxRuntime.cs">
+      <Link>GumRuntimes\Controls\CheckBoxRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\CheckBoxRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\CheckBoxRuntime.Generated.cs</Link>
+      <DependentUpon>CheckBoxRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ComboBoxRuntime.cs">
+      <Link>GumRuntimes\Controls\ComboBoxRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ComboBoxRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ComboBoxRuntime.Generated.cs</Link>
+      <DependentUpon>ComboBoxRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\DialogBoxRuntime.cs">
+      <Link>GumRuntimes\Controls\DialogBoxRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\DialogBoxRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\DialogBoxRuntime.Generated.cs</Link>
+      <DependentUpon>DialogBoxRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\InputDeviceSelectionItemRuntime.cs">
+      <Link>GumRuntimes\Controls\InputDeviceSelectionItemRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\InputDeviceSelectionItemRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\InputDeviceSelectionItemRuntime.Generated.cs</Link>
+      <DependentUpon>InputDeviceSelectionItemRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\InputDeviceSelectorRuntime.cs">
+      <Link>GumRuntimes\Controls\InputDeviceSelectorRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\InputDeviceSelectorRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\InputDeviceSelectorRuntime.Generated.cs</Link>
+      <DependentUpon>InputDeviceSelectorRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\KeyboardKeyRuntime.cs">
+      <Link>GumRuntimes\Controls\KeyboardKeyRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\KeyboardKeyRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\KeyboardKeyRuntime.Generated.cs</Link>
+      <DependentUpon>KeyboardKeyRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\KeyboardRuntime.cs">
+      <Link>GumRuntimes\Controls\KeyboardRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\KeyboardRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\KeyboardRuntime.Generated.cs</Link>
+      <DependentUpon>KeyboardRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ListBoxItemRuntime.cs">
+      <Link>GumRuntimes\Controls\ListBoxItemRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ListBoxItemRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ListBoxItemRuntime.Generated.cs</Link>
+      <DependentUpon>ListBoxItemRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ListBoxRuntime.cs">
+      <Link>GumRuntimes\Controls\ListBoxRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ListBoxRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ListBoxRuntime.Generated.cs</Link>
+      <DependentUpon>ListBoxRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\PasswordBoxRuntime.cs">
+      <Link>GumRuntimes\Controls\PasswordBoxRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\PasswordBoxRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\PasswordBoxRuntime.Generated.cs</Link>
+      <DependentUpon>PasswordBoxRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\PlayerJoinViewItemRuntime.cs">
+      <Link>GumRuntimes\Controls\PlayerJoinViewItemRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\PlayerJoinViewItemRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\PlayerJoinViewItemRuntime.Generated.cs</Link>
+      <DependentUpon>PlayerJoinViewItemRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\PlayerJoinViewRuntime.cs">
+      <Link>GumRuntimes\Controls\PlayerJoinViewRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\PlayerJoinViewRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\PlayerJoinViewRuntime.Generated.cs</Link>
+      <DependentUpon>PlayerJoinViewRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\RadioButtonRuntime.cs">
+      <Link>GumRuntimes\Controls\RadioButtonRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\RadioButtonRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\RadioButtonRuntime.Generated.cs</Link>
+      <DependentUpon>RadioButtonRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ScrollBarRuntime.cs">
+      <Link>GumRuntimes\Controls\ScrollBarRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ScrollBarRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ScrollBarRuntime.Generated.cs</Link>
+      <DependentUpon>ScrollBarRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ScrollViewerRuntime.cs">
+      <Link>GumRuntimes\Controls\ScrollViewerRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ScrollViewerRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ScrollViewerRuntime.Generated.cs</Link>
+      <DependentUpon>ScrollViewerRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\SettingsViewRuntime.cs">
+      <Link>GumRuntimes\Controls\SettingsViewRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\SettingsViewRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\SettingsViewRuntime.Generated.cs</Link>
+      <DependentUpon>SettingsViewRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\SliderRuntime.cs">
+      <Link>GumRuntimes\Controls\SliderRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\SliderRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\SliderRuntime.Generated.cs</Link>
+      <DependentUpon>SliderRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\TextBoxRuntime.cs">
+      <Link>GumRuntimes\Controls\TextBoxRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\TextBoxRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\TextBoxRuntime.Generated.cs</Link>
+      <DependentUpon>TextBoxRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ToastRuntime.cs">
+      <Link>GumRuntimes\Controls\ToastRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\ToastRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\ToastRuntime.Generated.cs</Link>
+      <DependentUpon>ToastRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\TreeViewItemRuntime.cs">
+      <Link>GumRuntimes\Controls\TreeViewItemRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\TreeViewItemRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\TreeViewItemRuntime.Generated.cs</Link>
+      <DependentUpon>TreeViewItemRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\TreeViewRuntime.cs">
+      <Link>GumRuntimes\Controls\TreeViewRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\TreeViewRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\TreeViewRuntime.Generated.cs</Link>
+      <DependentUpon>TreeViewRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\TreeViewToggleRuntime.cs">
+      <Link>GumRuntimes\Controls\TreeViewToggleRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\TreeViewToggleRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\TreeViewToggleRuntime.Generated.cs</Link>
+      <DependentUpon>TreeViewToggleRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\UserControlRuntime.cs">
+      <Link>GumRuntimes\Controls\UserControlRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Controls\UserControlRuntime.Generated.cs">
+      <Link>GumRuntimes\Controls\UserControlRuntime.Generated.cs</Link>
+      <DependentUpon>UserControlRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\CautionLinesRuntime.cs">
+      <Link>GumRuntimes\Elements\CautionLinesRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\CautionLinesRuntime.Generated.cs">
+      <Link>GumRuntimes\Elements\CautionLinesRuntime.Generated.cs</Link>
+      <DependentUpon>CautionLinesRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\DividerHorizontalRuntime.cs">
+      <Link>GumRuntimes\Elements\DividerHorizontalRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\DividerHorizontalRuntime.Generated.cs">
+      <Link>GumRuntimes\Elements\DividerHorizontalRuntime.Generated.cs</Link>
+      <DependentUpon>DividerHorizontalRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\DividerRuntime.cs">
+      <Link>GumRuntimes\Elements\DividerRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\DividerRuntime.Generated.cs">
+      <Link>GumRuntimes\Elements\DividerRuntime.Generated.cs</Link>
+      <DependentUpon>DividerRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\DividerVerticalRuntime.cs">
+      <Link>GumRuntimes\Elements\DividerVerticalRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\DividerVerticalRuntime.Generated.cs">
+      <Link>GumRuntimes\Elements\DividerVerticalRuntime.Generated.cs</Link>
+      <DependentUpon>DividerVerticalRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\IconRuntime.cs">
+      <Link>GumRuntimes\Elements\IconRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\IconRuntime.Generated.cs">
+      <Link>GumRuntimes\Elements\IconRuntime.Generated.cs</Link>
+      <DependentUpon>IconRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\LabelRuntime.cs">
+      <Link>GumRuntimes\Elements\LabelRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\LabelRuntime.Generated.cs">
+      <Link>GumRuntimes\Elements\LabelRuntime.Generated.cs</Link>
+      <DependentUpon>LabelRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\PercentBarIconRuntime.cs">
+      <Link>GumRuntimes\Elements\PercentBarIconRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\PercentBarIconRuntime.Generated.cs">
+      <Link>GumRuntimes\Elements\PercentBarIconRuntime.Generated.cs</Link>
+      <DependentUpon>PercentBarIconRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\PercentBarRuntime.cs">
+      <Link>GumRuntimes\Elements\PercentBarRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\PercentBarRuntime.Generated.cs">
+      <Link>GumRuntimes\Elements\PercentBarRuntime.Generated.cs</Link>
+      <DependentUpon>PercentBarRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\VerticalLinesRuntime.cs">
+      <Link>GumRuntimes\Elements\VerticalLinesRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Elements\VerticalLinesRuntime.Generated.cs">
+      <Link>GumRuntimes\Elements\VerticalLinesRuntime.Generated.cs</Link>
+      <DependentUpon>VerticalLinesRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\GameScreenGumRuntime.cs">
+      <Link>GumRuntimes\GameScreenGumRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\GameScreenGumRuntime.Generated.cs">
+      <Link>GumRuntimes\GameScreenGumRuntime.Generated.cs</Link>
+      <DependentUpon>GameScreenGumRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\GumIdb.Generated.cs">
+      <Link>GumRuntimes\GumIdb.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Level1GumRuntime.cs">
+      <Link>GumRuntimes\Level1GumRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Level1GumRuntime.Generated.cs">
+      <Link>GumRuntimes\Level1GumRuntime.Generated.cs</Link>
+      <DependentUpon>Level1GumRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Level2GumRuntime.cs">
+      <Link>GumRuntimes\Level2GumRuntime.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\Level2GumRuntime.Generated.cs">
+      <Link>GumRuntimes\Level2GumRuntime.Generated.cs</Link>
+      <DependentUpon>Level2GumRuntime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\NineSliceRuntime.Generated.cs">
+      <Link>GumRuntimes\NineSliceRuntime.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\PolygonRuntime.Generated.cs">
+      <Link>GumRuntimes\PolygonRuntime.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\RectangleRuntime.Generated.cs">
+      <Link>GumRuntimes\RectangleRuntime.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\SpriteRuntime.Generated.cs">
+      <Link>GumRuntimes\SpriteRuntime.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\GumRuntimes\TextRuntime.Generated.cs">
+      <Link>GumRuntimes\TextRuntime.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Performance\IEntityFactory.Generated.cs">
+      <Link>Performance\IEntityFactory.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Performance\PoolList.Generated.cs">
+      <Link>Performance\PoolList.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Platformer\Enums.Generated.cs">
+      <Link>Platformer\Enums.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Platformer\IPlatformer.Generated.cs">
+      <Link>Platformer\IPlatformer.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Platformer\PlatformerAnimationController.Generated.cs">
+      <Link>Platformer\PlatformerAnimationController.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Screens\GameScreen.cs">
+      <Link>Screens\GameScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Screens\GameScreen.Generated.cs">
+      <Link>Screens\GameScreen.Generated.cs</Link>
+      <DependentUpon>GameScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Screens\Level1.cs">
+      <Link>Screens\Level1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Screens\Level1.Generated.cs">
+      <Link>Screens\Level1.Generated.cs</Link>
+      <DependentUpon>Level1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Screens\Level2.cs">
+      <Link>Screens\Level2.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Screens\Level2.Generated.cs">
+      <Link>Screens\Level2.Generated.cs</Link>
+      <DependentUpon>Level2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\Setup\CameraSetup.Generated.cs">
+      <Link>Setup\CameraSetup.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileCollisions\CollidableListVsTileShapeCollectionRelationship.Generated.cs">
+      <Link>TileCollisions\CollidableListVsTileShapeCollectionRelationship.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileCollisions\CollidableVsTileShapeCollectionRelationship.Generated.cs">
+      <Link>TileCollisions\CollidableVsTileShapeCollectionRelationship.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileCollisions\CollisionManagerTileShapeCollectionExtensions.Generated.cs">
+      <Link>TileCollisions\CollisionManagerTileShapeCollectionExtensions.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileCollisions\TileShapeCollection.Generated.cs">
+      <Link>TileCollisions\TileShapeCollection.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileEntities\TileEntityInstantiator.Generated.cs">
+      <Link>TileEntities\TileEntityInstantiator.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\AbstractMapLayer.Generated.cs">
+      <Link>TileGraphics\AbstractMapLayer.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\AnimationChainContainer.Generated.cs">
+      <Link>TileGraphics\AnimationChainContainer.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\ExternalTileset.Generated.cs">
+      <Link>TileGraphics\ExternalTileset.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\LayeredTileMap.Generated.cs">
+      <Link>TileGraphics\LayeredTileMap.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\LayeredTileMapAnimation.Generated.cs">
+      <Link>TileGraphics\LayeredTileMapAnimation.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\MapDrawableBatch.Generated.cs">
+      <Link>TileGraphics\MapDrawableBatch.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\MapLayer.Generated.cs">
+      <Link>TileGraphics\MapLayer.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\MapTileset.Generated.cs">
+      <Link>TileGraphics\MapTileset.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\MapTilesetTile.Generated.cs">
+      <Link>TileGraphics\MapTilesetTile.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\NamedValue.Generated.cs">
+      <Link>TileGraphics\NamedValue.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\ReducedTileMapInfo.Generated.cs">
+      <Link>TileGraphics\ReducedTileMapInfo.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\ReducedTileMapInfo.TiledMapSave.Generated.cs">
+      <Link>TileGraphics\ReducedTileMapInfo.TiledMapSave.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\TileAnimation.Generated.cs">
+      <Link>TileGraphics\TileAnimation.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\TileAnimationFrame.Generated.cs">
+      <Link>TileGraphics\TileAnimationFrame.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\TiledMapSave.Conversion.Generated.cs">
+      <Link>TileGraphics\TiledMapSave.Conversion.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\TiledMapSave.Serialization.Generated.cs">
+      <Link>TileGraphics\TiledMapSave.Serialization.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\TiledMapToShapeCollectionConverter.Generated.cs">
+      <Link>TileGraphics\TiledMapToShapeCollectionConverter.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\TileNodeNetworkCreator.Generated.cs">
+      <Link>TileGraphics\TileNodeNetworkCreator.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\Tileset.Generated.cs">
+      <Link>TileGraphics\Tileset.Generated.cs</Link>
+    </Compile>
+    <Compile Include="..\..\test_webrtc\TileGraphics\TilesetExtensionMethods.Generated.cs">
+      <Link>TileGraphics\TilesetExtensionMethods.Generated.cs</Link>
+    </Compile>
+    <Compile Include="Pages\Index.razor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Game1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FlatRedBallKniWeb" Version="2024.9.29.1287" />
+    <PackageReference Include="nkast.Xna.Framework" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Content" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Graphics" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Audio" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Media" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Input" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Game" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Blazor" Version="3.13.9001" />
+    <PackageReference Include="nkast.Xna.Framework.Content.Pipeline.Builder" Version="3.13.9001" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.32" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.32" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net8.0' ">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.7" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <KniContentReference Include="Content\test_webrtcContent.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Libraries\Web\Debug\" />
+    <Folder Include="Libraries\Web\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FlatRedBall.Forms.Kni.Web">
+      <HintPath>Libraries\Web\Debug\FlatRedBall.Forms.Kni.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="GumCore.Kni.Web">
+      <HintPath>Libraries\Web\Debug\GumCore.Kni.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="StateInterpolation.Kni.Web">
+      <HintPath>Libraries\Web\Debug\StateInterpolation.Kni.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Content\Shader.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\test_webrtc\Content\Entities\Player\FRBeefcakeSpritesheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>FRBeefcakeSpritesheet</Name>
+      <Link>Content\Entities\Player\FRBeefcakeSpritesheet.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\Entities\Player\PlatformerAnimations.achx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PlatformerAnimations</Name>
+      <Link>Content\Entities\Player\PlatformerAnimations.achx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\Entities\Player\PlatformerValuesStatic.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PlatformerValuesStatic</Name>
+      <Link>Content\Entities\Player\PlatformerValuesStatic.csv</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\FrbVisualTiles.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>FrbVisualTiles</Name>
+      <Link>Content\FrbVisualTiles.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\FrbVisualTiles.tsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>FrbVisualTiles</Name>
+      <Link>Content\FrbVisualTiles.tsx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ButtonClose.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ButtonClose</Name>
+      <Link>Content\GumProject\Components\Controls\ButtonClose.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ButtonConfirm.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ButtonConfirm</Name>
+      <Link>Content\GumProject\Components\Controls\ButtonConfirm.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ButtonDeny.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ButtonDeny</Name>
+      <Link>Content\GumProject\Components\Controls\ButtonDeny.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ButtonIcon.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ButtonIcon</Name>
+      <Link>Content\GumProject\Components\Controls\ButtonIcon.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ButtonStandard.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ButtonStandard</Name>
+      <Link>Content\GumProject\Components\Controls\ButtonStandard.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ButtonStandardIcon.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ButtonStandardIcon</Name>
+      <Link>Content\GumProject\Components\Controls\ButtonStandardIcon.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ButtonTab.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ButtonTab</Name>
+      <Link>Content\GumProject\Components\Controls\ButtonTab.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\CheckBox.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>CheckBox</Name>
+      <Link>Content\GumProject\Components\Controls\CheckBox.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ComboBox.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ComboBox</Name>
+      <Link>Content\GumProject\Components\Controls\ComboBox.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\DialogBox.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>DialogBox</Name>
+      <Link>Content\GumProject\Components\Controls\DialogBox.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\InputDeviceSelectionItem.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>InputDeviceSelectionItem</Name>
+      <Link>Content\GumProject\Components\Controls\InputDeviceSelectionItem.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\InputDeviceSelector.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>InputDeviceSelector</Name>
+      <Link>Content\GumProject\Components\Controls\InputDeviceSelector.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\Keyboard.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Keyboard</Name>
+      <Link>Content\GumProject\Components\Controls\Keyboard.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\KeyboardKey.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>KeyboardKey</Name>
+      <Link>Content\GumProject\Components\Controls\KeyboardKey.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ListBox.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ListBox</Name>
+      <Link>Content\GumProject\Components\Controls\ListBox.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ListBoxItem.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ListBoxItem</Name>
+      <Link>Content\GumProject\Components\Controls\ListBoxItem.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\PasswordBox.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PasswordBox</Name>
+      <Link>Content\GumProject\Components\Controls\PasswordBox.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\PlayerJoinView.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PlayerJoinView</Name>
+      <Link>Content\GumProject\Components\Controls\PlayerJoinView.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\PlayerJoinViewItem.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PlayerJoinViewItem</Name>
+      <Link>Content\GumProject\Components\Controls\PlayerJoinViewItem.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\RadioButton.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>RadioButton</Name>
+      <Link>Content\GumProject\Components\Controls\RadioButton.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ScrollBar.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ScrollBar</Name>
+      <Link>Content\GumProject\Components\Controls\ScrollBar.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\ScrollViewer.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ScrollViewer</Name>
+      <Link>Content\GumProject\Components\Controls\ScrollViewer.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\SettingsView.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>SettingsView</Name>
+      <Link>Content\GumProject\Components\Controls\SettingsView.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\Slider.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Slider</Name>
+      <Link>Content\GumProject\Components\Controls\Slider.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\TextBox.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>TextBox</Name>
+      <Link>Content\GumProject\Components\Controls\TextBox.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\Toast.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Toast</Name>
+      <Link>Content\GumProject\Components\Controls\Toast.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\TreeView.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>TreeView</Name>
+      <Link>Content\GumProject\Components\Controls\TreeView.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\TreeViewItem.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>TreeViewItem</Name>
+      <Link>Content\GumProject\Components\Controls\TreeViewItem.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\TreeViewToggle.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>TreeViewToggle</Name>
+      <Link>Content\GumProject\Components\Controls\TreeViewToggle.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Controls\UserControl.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>UserControl</Name>
+      <Link>Content\GumProject\Components\Controls\UserControl.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Elements\CautionLines.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>CautionLines</Name>
+      <Link>Content\GumProject\Components\Elements\CautionLines.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Elements\Divider.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Divider</Name>
+      <Link>Content\GumProject\Components\Elements\Divider.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Elements\DividerHorizontal.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>DividerHorizontal</Name>
+      <Link>Content\GumProject\Components\Elements\DividerHorizontal.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Elements\DividerVertical.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>DividerVertical</Name>
+      <Link>Content\GumProject\Components\Elements\DividerVertical.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Elements\Icon.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Icon</Name>
+      <Link>Content\GumProject\Components\Elements\Icon.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Elements\Label.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Label</Name>
+      <Link>Content\GumProject\Components\Elements\Label.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Elements\PercentBar.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PercentBar</Name>
+      <Link>Content\GumProject\Components\Elements\PercentBar.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Elements\PercentBarIcon.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PercentBarIcon</Name>
+      <Link>Content\GumProject\Components\Elements\PercentBarIcon.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Components\Elements\VerticalLines.gucx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>VerticalLines</Name>
+      <Link>Content\GumProject\Components\Elements\VerticalLines.gucx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font10Arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font10Arial</Name>
+      <Link>Content\GumProject\FontCache\Font10Arial.fnt</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font10Arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font10Arial_0</Name>
+      <Link>Content\GumProject\FontCache\Font10Arial_0.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font12Arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font12Arial</Name>
+      <Link>Content\GumProject\FontCache\Font12Arial.fnt</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font12Arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font12Arial_0</Name>
+      <Link>Content\GumProject\FontCache\Font12Arial_0.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font14Arial.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font14Arial</Name>
+      <Link>Content\GumProject\FontCache\Font14Arial.fnt</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font14Arial_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font14Arial_0</Name>
+      <Link>Content\GumProject\FontCache\Font14Arial_0.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font14Arial_Bold.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font14Arial_Bold</Name>
+      <Link>Content\GumProject\FontCache\Font14Arial_Bold.fnt</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font14Arial_Bold_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font14Arial_Bold_0</Name>
+      <Link>Content\GumProject\FontCache\Font14Arial_Bold_0.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font14Arial_Italic.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font14Arial_Italic</Name>
+      <Link>Content\GumProject\FontCache\Font14Arial_Italic.fnt</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font14Arial_Italic_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font14Arial_Italic_0</Name>
+      <Link>Content\GumProject\FontCache\Font14Arial_Italic_0.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font16Arial_Bold.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font16Arial_Bold</Name>
+      <Link>Content\GumProject\FontCache\Font16Arial_Bold.fnt</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font16Arial_Bold_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font16Arial_Bold_0</Name>
+      <Link>Content\GumProject\FontCache\Font16Arial_Bold_0.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font18Arial_Bold.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font18Arial_Bold</Name>
+      <Link>Content\GumProject\FontCache\Font18Arial_Bold.fnt</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font18Arial_Bold_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font18Arial_Bold_0</Name>
+      <Link>Content\GumProject\FontCache\Font18Arial_Bold_0.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font22Arial_Bold.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font22Arial_Bold</Name>
+      <Link>Content\GumProject\FontCache\Font22Arial_Bold.fnt</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font22Arial_Bold_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font22Arial_Bold_0</Name>
+      <Link>Content\GumProject\FontCache\Font22Arial_Bold_0.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font28Arial_Bold.fnt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font28Arial_Bold</Name>
+      <Link>Content\GumProject\FontCache\Font28Arial_Bold.fnt</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\FontCache\Font28Arial_Bold_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Font28Arial_Bold_0</Name>
+      <Link>Content\GumProject\FontCache\Font28Arial_Bold_0.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\GumProject.gumx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>GumProject</Name>
+      <Link>Content\GumProject\GumProject.gumx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Screens\GameScreenGum.gusx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>GameScreenGum</Name>
+      <Link>Content\GumProject\Screens\GameScreenGum.gusx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Screens\Level1Gum.gusx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Level1Gum</Name>
+      <Link>Content\GumProject\Screens\Level1Gum.gusx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Screens\Level2Gum.gusx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Level2Gum</Name>
+      <Link>Content\GumProject\Screens\Level2Gum.gusx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Standards\Circle.gutx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Circle</Name>
+      <Link>Content\GumProject\Standards\Circle.gutx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Standards\ColoredRectangle.gutx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>ColoredRectangle</Name>
+      <Link>Content\GumProject\Standards\ColoredRectangle.gutx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Standards\Component.gutx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Component</Name>
+      <Link>Content\GumProject\Standards\Component.gutx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Standards\Container.gutx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Container</Name>
+      <Link>Content\GumProject\Standards\Container.gutx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Standards\NineSlice.gutx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>NineSlice</Name>
+      <Link>Content\GumProject\Standards\NineSlice.gutx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Standards\Polygon.gutx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Polygon</Name>
+      <Link>Content\GumProject\Standards\Polygon.gutx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Standards\Rectangle.gutx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Rectangle</Name>
+      <Link>Content\GumProject\Standards\Rectangle.gutx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Standards\Sprite.gutx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Sprite</Name>
+      <Link>Content\GumProject\Standards\Sprite.gutx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\Standards\Text.gutx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Text</Name>
+      <Link>Content\GumProject\Standards\Text.gutx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\GumProject\UISpriteSheet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>UISpriteSheet</Name>
+      <Link>Content\GumProject\UISpriteSheet.png</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\Screens\Level1\Level1Map.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Level1Map</Name>
+      <Link>Content\Screens\Level1\Level1Map.tmx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\Screens\Level2\Level2Map.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Level2Map</Name>
+      <Link>Content\Screens\Level2\Level2Map.tmx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\StandardTileset.tsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>StandardTileset</Name>
+      <Link>Content\StandardTileset.tsx</Link>
+    </None>
+    <None Include="..\..\test_webrtc\Content\StandardTilesetIcons.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>StandardTilesetIcons</Name>
+      <Link>Content\StandardTilesetIcons.png</Link>
+    </None>
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="set &quot;source=$(TargetDir)Content&quot;&#xD;&#xA;set &quot;destination=wwwroot\Content&quot;&#xD;&#xA;mkdir &quot;%25source%25&quot; 2&gt;nul&#xD;&#xA;xcopy /E /Y &quot;%25source%25&quot; &quot;%25destination%25&quot;" />
+  </Target>
+</Project>

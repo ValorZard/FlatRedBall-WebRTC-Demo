@@ -48,9 +48,9 @@ namespace test_webrtc
 
 		private static uint _loadTestPayloadSize = 0;
 		private static int _loadTestCount = 0;
-
+#if DESKTOP_GL
 		private RTCDataChannel dataChannel = null;
-
+#endif
 		public Game1() : base()
         {
 
@@ -87,7 +87,7 @@ namespace test_webrtc
 		public void StartServer()
 		{
 			FlatRedBall.Debugging.Debugger.CommandLineWrite("WebRTC Get Started Data Channel");
-
+#if DESKTOP_GL
 			// Start web socket.
 			FlatRedBall.Debugging.Debugger.CommandLineWrite("Starting web socket server...");
 			var webSocketServer = new WebSocketServer(IPAddress.Any, WEBSOCKET_PORT);
@@ -111,12 +111,13 @@ namespace test_webrtc
 			// Wait for a signal saying the call failed, was cancelled with ctrl-c or completed.
 			// if we comment this out, this probably will make it so that it never actually ends the call, which is probably fine?
 			//exitMre.WaitOne();
+#endif
 		}
 
 		public void StartClient()
 		{
 			FlatRedBall.Debugging.Debugger.CommandLineWrite("WebRTC Get Started Data Channel");
-
+#if DESKTOP_GL
 			// Plumbing code to facilitate a graceful exit.
 			CancellationTokenSource exitCts = new CancellationTokenSource(); // Cancellation token to stop the SIP transport and RTP stream.
 
@@ -140,6 +141,7 @@ namespace test_webrtc
 			// Wait for a signal saying the call failed, was cancelled with ctrl-c or completed.
 			// if we comment this out, this probably will make it so that it never actually ends the call, which is probably fine?
 			//exitMre.WaitOne();
+#endif
 		}
 
 		protected override void Update(GameTime gameTime)
@@ -152,8 +154,10 @@ namespace test_webrtc
 
             base.Update(gameTime);
 
+#if DESKTOP_GL
 			dataChannel?.send(gameTime.ElapsedGameTime.ToString());
-        }
+#endif
+		}
 
         protected override void Draw(GameTime gameTime)
         {
@@ -165,7 +169,7 @@ namespace test_webrtc
 
             base.Draw(gameTime);
         }
-
+#if DESKTOP_GL
 		private async Task<RTCPeerConnection> CreatePeerConnection()
 		{
 			RTCConfiguration config = new RTCConfiguration
@@ -289,5 +293,6 @@ namespace test_webrtc
 				return sha256.ComputeHash(hashOfHashes).HexStr();
 			}
 		}
+#endif
 	}
 }
