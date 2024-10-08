@@ -14,7 +14,7 @@ namespace test_webrtc.FormsControls.Screens
                 Visual.BindingContext = value;
             }
         }
-        public FlatRedBall.Forms.Controls.Button ButtonStandardInstance { get; set; }
+        public FlatRedBall.Forms.Controls.Button StartServerButton { get; set; }
         public GameScreenGumForms () 
         {
             CustomInitialize();
@@ -27,7 +27,7 @@ namespace test_webrtc.FormsControls.Screens
         }
         private void ReactToVisualChanged () 
         {
-            ButtonStandardInstance = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("ButtonStandardInstance").FormsControlAsObject;
+            StartServerButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("StartServerButton").FormsControlAsObject;
         }
         partial void CustomInitialize();
     }

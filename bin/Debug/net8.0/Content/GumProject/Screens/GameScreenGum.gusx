@@ -5,25 +5,25 @@
     <Name>Default</Name>
     <Variable>
       <Type>string</Type>
-      <Name>ButtonStandardInstance.ButtonDisplayText</Name>
+      <Name>StartServerButton.ButtonDisplayText</Name>
       <Value xsi:type="xsd:string">Start Server</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ButtonStandardInstance.X</Name>
+      <Name>StartServerButton.X</Name>
       <Value xsi:type="xsd:float">349</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ButtonStandardInstance.Y</Name>
+      <Name>StartServerButton.Y</Name>
       <Value xsi:type="xsd:float">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>
   <Instance>
-    <Name>ButtonStandardInstance</Name>
+    <Name>StartServerButton</Name>
     <BaseType>Controls/ButtonStandard</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

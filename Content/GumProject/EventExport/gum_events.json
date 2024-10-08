@@ -7,6 +7,13 @@
         "ElementType": "Screens",
         "EventType": 5,
         "TimestampUtc": "2024-10-07T23:23:58.2401674Z"
+      },
+      {
+        "NewName": "GameScreenGum.StartServerButton",
+        "OldName": "GameScreenGum.ButtonStandardInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2024-10-08T00:05:12.4328878Z"
       }
     ]
   }

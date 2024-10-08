@@ -25,9 +25,9 @@ namespace test_webrtc.GumRuntimes
                 switch(mCurrentVariableState)
                 {
                     case  VariableState.Default:
-                        ButtonStandardInstance.ButtonDisplayText = "Start Server";
-                        ButtonStandardInstance.X = 349f;
-                        ButtonStandardInstance.Y = 2f;
+                        StartServerButton.ButtonDisplayText = "Start Server";
+                        StartServerButton.X = 349f;
+                        StartServerButton.Y = 2f;
                         break;
                 }
             }
@@ -42,25 +42,25 @@ namespace test_webrtc.GumRuntimes
                 throw new System.Exception("interpolationValue cannot be NaN");
             }
             #endif
-            bool setButtonStandardInstanceXFirstValue = false;
-            bool setButtonStandardInstanceXSecondValue = false;
-            float ButtonStandardInstanceXFirstValue= 0;
-            float ButtonStandardInstanceXSecondValue= 0;
-            bool setButtonStandardInstanceYFirstValue = false;
-            bool setButtonStandardInstanceYSecondValue = false;
-            float ButtonStandardInstanceYFirstValue= 0;
-            float ButtonStandardInstanceYSecondValue= 0;
+            bool setStartServerButtonXFirstValue = false;
+            bool setStartServerButtonXSecondValue = false;
+            float StartServerButtonXFirstValue= 0;
+            float StartServerButtonXSecondValue= 0;
+            bool setStartServerButtonYFirstValue = false;
+            bool setStartServerButtonYSecondValue = false;
+            float StartServerButtonYFirstValue= 0;
+            float StartServerButtonYSecondValue= 0;
             switch(firstState)
             {
                 case  VariableState.Default:
                     if (interpolationValue < 1)
                     {
-                        this.ButtonStandardInstance.ButtonDisplayText = "Start Server";
+                        this.StartServerButton.ButtonDisplayText = "Start Server";
                     }
-                    setButtonStandardInstanceXFirstValue = true;
-                    ButtonStandardInstanceXFirstValue = 349f;
-                    setButtonStandardInstanceYFirstValue = true;
-                    ButtonStandardInstanceYFirstValue = 2f;
+                    setStartServerButtonXFirstValue = true;
+                    StartServerButtonXFirstValue = 349f;
+                    setStartServerButtonYFirstValue = true;
+                    StartServerButtonYFirstValue = 2f;
                     break;
             }
             switch(secondState)
@@ -68,12 +68,12 @@ namespace test_webrtc.GumRuntimes
                 case  VariableState.Default:
                     if (interpolationValue >= 1)
                     {
-                        this.ButtonStandardInstance.ButtonDisplayText = "Start Server";
+                        this.StartServerButton.ButtonDisplayText = "Start Server";
                     }
-                    setButtonStandardInstanceXSecondValue = true;
-                    ButtonStandardInstanceXSecondValue = 349f;
-                    setButtonStandardInstanceYSecondValue = true;
-                    ButtonStandardInstanceYSecondValue = 2f;
+                    setStartServerButtonXSecondValue = true;
+                    StartServerButtonXSecondValue = 349f;
+                    setStartServerButtonYSecondValue = true;
+                    StartServerButtonYSecondValue = 2f;
                     break;
             }
             var wasSuppressed = mIsLayoutSuspended;
@@ -83,13 +83,13 @@ namespace test_webrtc.GumRuntimes
             {
                 SuspendLayout(suspendRecursively);
             }
-            if (setButtonStandardInstanceXFirstValue && setButtonStandardInstanceXSecondValue)
+            if (setStartServerButtonXFirstValue && setStartServerButtonXSecondValue)
             {
-                ButtonStandardInstance.X = ButtonStandardInstanceXFirstValue * (1 - interpolationValue) + ButtonStandardInstanceXSecondValue * interpolationValue;
+                StartServerButton.X = StartServerButtonXFirstValue * (1 - interpolationValue) + StartServerButtonXSecondValue * interpolationValue;
             }
-            if (setButtonStandardInstanceYFirstValue && setButtonStandardInstanceYSecondValue)
+            if (setStartServerButtonYFirstValue && setStartServerButtonYSecondValue)
             {
-                ButtonStandardInstance.Y = ButtonStandardInstanceYFirstValue * (1 - interpolationValue) + ButtonStandardInstanceYSecondValue * interpolationValue;
+                StartServerButton.Y = StartServerButtonYFirstValue * (1 - interpolationValue) + StartServerButtonYSecondValue * interpolationValue;
             }
             if (interpolationValue < 1)
             {
@@ -166,7 +166,7 @@ namespace test_webrtc.GumRuntimes
         public override void StopAnimations () 
         {
             base.StopAnimations();
-            ButtonStandardInstance.StopAnimations();
+            StartServerButton.StopAnimations();
         }
         public override FlatRedBall.Gum.Animation.GumAnimation GetAnimation (string animationName) 
         {
@@ -182,25 +182,25 @@ namespace test_webrtc.GumRuntimes
                     newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                     {
                         SetsValue = true,
-                        Name = "ButtonStandardInstance.ButtonDisplayText",
+                        Name = "StartServerButton.ButtonDisplayText",
                         Type = "string",
-                        Value = ButtonStandardInstance.ButtonDisplayText
+                        Value = StartServerButton.ButtonDisplayText
                     }
                     );
                     newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                     {
                         SetsValue = true,
-                        Name = "ButtonStandardInstance.X",
+                        Name = "StartServerButton.X",
                         Type = "float",
-                        Value = ButtonStandardInstance.X
+                        Value = StartServerButton.X
                     }
                     );
                     newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                     {
                         SetsValue = true,
-                        Name = "ButtonStandardInstance.Y",
+                        Name = "StartServerButton.Y",
                         Type = "float",
-                        Value = ButtonStandardInstance.Y
+                        Value = StartServerButton.Y
                     }
                     );
                     break;
@@ -216,25 +216,25 @@ namespace test_webrtc.GumRuntimes
                     newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                     {
                         SetsValue = true,
-                        Name = "ButtonStandardInstance.ButtonDisplayText",
+                        Name = "StartServerButton.ButtonDisplayText",
                         Type = "string",
-                        Value = ButtonStandardInstance.ButtonDisplayText
+                        Value = StartServerButton.ButtonDisplayText
                     }
                     );
                     newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                     {
                         SetsValue = true,
-                        Name = "ButtonStandardInstance.X",
+                        Name = "StartServerButton.X",
                         Type = "float",
-                        Value = ButtonStandardInstance.X + 349f
+                        Value = StartServerButton.X + 349f
                     }
                     );
                     newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
                     {
                         SetsValue = true,
-                        Name = "ButtonStandardInstance.Y",
+                        Name = "StartServerButton.Y",
                         Type = "float",
-                        Value = ButtonStandardInstance.Y + 2f
+                        Value = StartServerButton.Y + 2f
                     }
                     );
                     break;
@@ -256,7 +256,7 @@ namespace test_webrtc.GumRuntimes
             base.ApplyState(state);
         }
         private bool tryCreateFormsObject;
-        public global::test_webrtc.GumRuntimes.Controls.ButtonStandardRuntime ButtonStandardInstance { get; set; }
+        public global::test_webrtc.GumRuntimes.Controls.ButtonStandardRuntime StartServerButton { get; set; }
         public GameScreenGumRuntime () 
         	: this(true, true)
         {
@@ -290,7 +290,7 @@ namespace test_webrtc.GumRuntimes
         }
         private void AssignInternalReferences () 
         {
-            ButtonStandardInstance = this.GetGraphicalUiElementByName("ButtonStandardInstance") as global::test_webrtc.GumRuntimes.Controls.ButtonStandardRuntime;
+            StartServerButton = this.GetGraphicalUiElementByName("StartServerButton") as global::test_webrtc.GumRuntimes.Controls.ButtonStandardRuntime;
             if (tryCreateFormsObject)
             {
                 FormsControlAsObject = new global::test_webrtc.FormsControls.Screens.GameScreenGumForms(this);
