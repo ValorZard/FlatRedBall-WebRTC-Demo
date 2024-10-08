@@ -49,6 +49,8 @@ namespace test_webrtc
 		private static uint _loadTestPayloadSize = 0;
 		private static int _loadTestCount = 0;
 
+		private RTCDataChannel dataChannel = null;
+
 		public Game1() : base()
         {
 
@@ -149,6 +151,8 @@ namespace test_webrtc
             GeneratedUpdate(gameTime);
 
             base.Update(gameTime);
+
+			dataChannel?.send(gameTime.ElapsedGameTime.ToString());
         }
 
         protected override void Draw(GameTime gameTime)
@@ -162,7 +166,7 @@ namespace test_webrtc
             base.Draw(gameTime);
         }
 
-		private async static Task<RTCPeerConnection> CreatePeerConnection()
+		private async Task<RTCPeerConnection> CreatePeerConnection()
 		{
 			RTCConfiguration config = new RTCConfiguration
 			{
@@ -222,7 +226,7 @@ namespace test_webrtc
 				};
 			};
 
-			var dc = await pc.createDataChannel("test", null);
+			dataChannel = await pc.createDataChannel("test", null);
 
 			pc.onconnectionstatechange += (state) =>
 			{
