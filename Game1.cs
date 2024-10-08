@@ -82,7 +82,7 @@ namespace test_webrtc
             base.Initialize();
         }
 
-		public void StartConnection()
+		public void StartServer()
 		{
 			FlatRedBall.Debugging.Debugger.CommandLineWrite("WebRTC Get Started Data Channel");
 
@@ -96,6 +96,35 @@ namespace test_webrtc
 			webSocketServer.Start();
 
 			FlatRedBall.Debugging.Debugger.CommandLineWrite($"Waiting for web socket connections on {webSocketServer.Address}:{webSocketServer.Port}...");
+			FlatRedBall.Debugging.Debugger.CommandLineWrite("Press ctrl-c to exit.");
+
+			// Ctrl-c will gracefully exit the call at any point.
+			ManualResetEvent exitMre = new ManualResetEvent(false);
+			Console.CancelKeyPress += delegate (object sender, ConsoleCancelEventArgs e)
+			{
+				e.Cancel = true;
+				exitMre.Set();
+			};
+
+			// Wait for a signal saying the call failed, was cancelled with ctrl-c or completed.
+			// if we comment this out, this probably will make it so that it never actually ends the call, which is probably fine?
+			//exitMre.WaitOne();
+		}
+
+		public void StartClient()
+		{
+			FlatRedBall.Debugging.Debugger.CommandLineWrite("WebRTC Get Started Data Channel");
+
+			// Plumbing code to facilitate a graceful exit.
+			CancellationTokenSource exitCts = new CancellationTokenSource(); // Cancellation token to stop the SIP transport and RTP stream.
+
+			// Start web socket.
+			FlatRedBall.Debugging.Debugger.CommandLineWrite("Starting web socket client...");
+			const string WEBSOCKET_URL = "ws://127.0.0.1:8081/";
+			var webSocketClient = new WebRTCWebSocketClient(WEBSOCKET_URL, CreatePeerConnection);
+			webSocketClient.Start(exitCts.Token);
+
+			FlatRedBall.Debugging.Debugger.CommandLineWrite($"Waiting for web socket connections on {WEBSOCKET_URL}...");
 			FlatRedBall.Debugging.Debugger.CommandLineWrite("Press ctrl-c to exit.");
 
 			// Ctrl-c will gracefully exit the call at any point.

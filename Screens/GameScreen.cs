@@ -25,14 +25,20 @@ namespace test_webrtc.Screens
         void CustomInitialize()
         {
 			Forms.StartServerButton.Click += StartServerButton_Click;
-
+			Forms.StartClientButton.Click += StartClientButton_Click;
         }
 
-        // this button starts server
+		// this button starts server
 		private void StartServerButton_Click(object sender, EventArgs e)
 		{
             var game1 = FlatRedBallServices.Game as Game1;
-            game1.StartConnection();
+            game1.StartServer();
+		}
+
+		private void StartClientButton_Click(object sender, EventArgs e)
+		{
+			var game1 = FlatRedBallServices.Game as Game1;
+			game1.StartClient();
 		}
 
 		void CustomActivity(bool firstTimeCalled)

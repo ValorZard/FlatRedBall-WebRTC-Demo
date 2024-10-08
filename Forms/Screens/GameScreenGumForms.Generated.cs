@@ -15,6 +15,7 @@ namespace test_webrtc.FormsControls.Screens
             }
         }
         public FlatRedBall.Forms.Controls.Button StartServerButton { get; set; }
+        public FlatRedBall.Forms.Controls.Button StartClientButton { get; set; }
         public GameScreenGumForms () 
         {
             CustomInitialize();
@@ -28,6 +29,7 @@ namespace test_webrtc.FormsControls.Screens
         private void ReactToVisualChanged () 
         {
             StartServerButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("StartServerButton").FormsControlAsObject;
+            StartClientButton = (FlatRedBall.Forms.Controls.Button)Visual.GetGraphicalUiElementByName("StartClientButton").FormsControlAsObject;
         }
         partial void CustomInitialize();
     }
